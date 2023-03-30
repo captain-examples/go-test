@@ -15,8 +15,6 @@ jobs:
           go-version: "1.19"
       - run: go build ./...
       - run: go install gotest.tools/gotestsum@latest
-      - run: |
-          captain run --suite-id captain-examples-go-test --test-results results.json -- \
-            gotestsum --jsonfile results.json
+      - run: captain run captain-examples-go-test
         env:
           RWX_ACCESS_TOKEN: ${{ secrets.RWX_ACCESS_TOKEN }}

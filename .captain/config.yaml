@@ -1,0 +1,5 @@
+test-suites:
+  captain-examples-go-test:
+    command: gotestsum --jsonfile results.json
+    results:
+      path: results.json
